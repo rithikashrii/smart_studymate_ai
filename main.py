@@ -33,3 +33,15 @@ if uploaded_file:
         st.exception(e)
 else:
     st.warning("⬆️ Please upload a PDF file to begin.")
+
+from notes_generator import generate_notes
+
+# After extracting PDF text
+st.subheader("📄 Extracted Text:")
+st.write(extracted_text)
+
+if st.button("📝 Generate Notes"):
+    with st.spinner("Generating study notes..."):
+        notes = generate_notes(extracted_text)
+    st.subheader("🧠 Smart Study Notes:")
+    st.write(notes)
