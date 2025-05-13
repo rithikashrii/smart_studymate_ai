@@ -1,3 +1,7 @@
 streamlit
 PyPDF2
 openai
+streamlit==1.45.1
+pypdf2==3.0.1
+openai==1.78.1
+pandas==2.2.3
